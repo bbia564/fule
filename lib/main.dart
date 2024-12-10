@@ -2,6 +2,7 @@ import 'package:building_computer/db_note/db_note.dart';
 import 'package:building_computer/pages/computer_first/computer_first_binding.dart';
 import 'package:building_computer/pages/computer_first/computer_first_view.dart';
 import 'package:building_computer/pages/computer_first/level/level_binding.dart';
+import 'package:building_computer/pages/computer_first/level/level_bu.dart';
 import 'package:building_computer/pages/computer_first/level/level_view.dart';
 import 'package:building_computer/pages/computer_first/note_list/note_add/note_add_binding.dart';
 import 'package:building_computer/pages/computer_first/note_list/note_add/note_add_view.dart';
@@ -11,6 +12,8 @@ import 'package:building_computer/pages/computer_first/ruler/ruler_binding.dart'
 import 'package:building_computer/pages/computer_first/ruler/ruler_view.dart';
 import 'package:building_computer/pages/computer_first/tank_volume/tank_volume_binding.dart';
 import 'package:building_computer/pages/computer_first/tank_volume/tank_volume_view.dart';
+import 'package:building_computer/pages/computer_first/terry_pit/terry_pit_binding.dart';
+import 'package:building_computer/pages/computer_first/terry_pit/terry_pit_view.dart';
 import 'package:building_computer/pages/computer_second/computer_second_binding.dart';
 import 'package:building_computer/pages/computer_second/computer_second_view.dart';
 import 'package:building_computer/pages/computer_tab/computer_tab_binding.dart';
@@ -37,7 +40,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Fules,
-      initialRoute: '/computer_tab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -89,11 +92,13 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Fules = [
+  GetPage(name: '/', page: () => const TerryPitView(), binding: TerryPitBinding()),
   GetPage(name: '/computer_tab', page: () => ComputerTabPage(), binding: ComputerTabBinding()),
   GetPage(name: '/computer_first', page: () => ComputerFirstPage(), binding: ComputerFirstBinding()),
   GetPage(name: '/computer_second', page: () => ComputerSecondPage(), binding: ComputerSecondBinding()),
   GetPage(name: '/tank_volume', page: () => TankVolumePage(), binding: TankVolumeBinding()),
   GetPage(name: '/ruler', page: () => RulerPage(), binding: RulerBinding()),
+  GetPage(name: '/level_tis', page: () => const LevelBu()),
   GetPage(name: '/note_list', page: () => NoteListPage(), binding: NoteListBinding()),
   GetPage(name: '/note_add', page: () => NoteAddPage(), binding: NoteAddBinding()),
   GetPage(name: '/level', page: () => LevelPage(), binding: LevelBinding()),

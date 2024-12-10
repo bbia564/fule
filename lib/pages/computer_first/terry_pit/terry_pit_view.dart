@@ -11,7 +11,7 @@ class TerryPitView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.parisian.value
+          () => controller.daniel.value
               ? const CircularProgressIndicator(color: Colors.deepPurpleAccent)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class TerryPitView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.filk();
+              controller.rwmfslca();
             },
             icon: const Icon(
               Icons.restart_alt,
